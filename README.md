@@ -14,4 +14,4 @@ This is not really interesting for the moment.
 
 ## Some links
 
-- [Metwork Framework](http://metwork-framework.org): a fist major opensource contribution hosted in a dedicated github organization
+- [Metwork Framework](http://metwork-framework.org): a first major opensource contribution hosted in a dedicated github organization
