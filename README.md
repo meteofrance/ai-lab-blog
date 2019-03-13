@@ -15,3 +15,6 @@ This is not really interesting for the moment.
 ## Some links
 
 - [Metwork Framework](http://metwork-framework.org): a first major opensource contribution hosted in a dedicated github organization
+
+- [Formation Deep Learning](https://github.com/meteofrance/formation-deep-learning): a deep learning training, in French, for engineers and developers
+
