@@ -9,23 +9,23 @@ markdown: kramdown
 theme: minima
 
 # Plugins
-plugins:
-  - jekyll-feed
+# plugins:
+#   - jekyll-feed
 
 # Navigation
-nav:
-  - title: Home
-    url: /
-  - title: About
-    url: /about
+# nav:
+#   - title: Home
+#     url: /
+#   - title: About
+#     url: /about
 
-# Exclude files from the build
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - vendor
-  - _site
+# # Exclude files from the build
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor
+#   - _site
 
-# GitHub Pages settings
-remote_theme: "mmistakes/minimal-mistakes"
+# # GitHub Pages settings
+# remote_theme: "mmistakes/minimal-mistakes"
