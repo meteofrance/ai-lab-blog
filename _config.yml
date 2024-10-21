@@ -1,7 +1,7 @@
 title: Meteo-France AI Lab's Blog
 description: Blogposts from Meteo-France AI Lab
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "https://meteofrance-ailab.github.io"
+baseurl: "ai-lab-blog" # the subpath of your site, e.g. /blog/
+url: "https://meteofrance.github.io/"
 
 remote_theme: jekyll/minima
 
