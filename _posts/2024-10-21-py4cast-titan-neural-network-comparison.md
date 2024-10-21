@@ -8,19 +8,16 @@ author:
 - Léa Berthomier
 ---
 
-# Experimental reports
 
-We present here a report on our experiments to build a weather forecasting model with Deep Learning.
+We present here a report on our first campaign of experiments to build a weather forecasting model with Deep Learning.
 
-## Choice of neural network architecture
+Our first goal was to train and compare several neural network architectures and assess their differences, all things being equal.
 
-Our first task was to train and compare several neural network architectures and assess their differences.
-
-Our goal in this first experiment campaign was to compare the performance of different neural network architectures under the same conditions.
+## Setup
 
 ### Dataset: TITAN
 
-- Source **AROME Analyses**
+- Source: only **AROME Analyses** (no data from Arpege coupling model)
 - **Resolution**: 2.5km
 - **Historical Data**: 2021-2023 (training: 2021-2022, testing: 2023)
 - **Time Step**: 1 Hour
@@ -35,6 +32,7 @@ Our goal in this first experiment campaign was to compare the performance of dif
 - **Training Samples**: ~16,000 pairs (t0, t+1)
 
 **Note**: Precipitation is the only parameter that is not an analysis. It is an AROME forecast made every hour, predicting the cumulative precipitation in mm for the next hour. In the future, we aim to use higher quality expertized radar data.
+
 
 ### Training Methodology
 
@@ -51,21 +49,14 @@ Our goal in this first experiment campaign was to compare the performance of dif
 - **Inference Time**: Less than one minute on CPU for +12h forecasts
 
 
-### Results
+## Results
 
 Both in metrics and forecast case studies, the UNetR++ model, modified and optimized, proved to be the best among the tested models.
 
 The HiLAM model, on the other hand, was costly to train, with lower scores and lower resolution forecasts.
 
-Here we present some forecast animations of these two models, compared to AROME and AROME analyses (our "ground truth" here) on a case study for 5 surface parameters.
+**Table : temps training, commentaires (config + lien vers fichier), prévisions lisses, loss finale sur jeu de test, RAM utilisée, batch size**
 
-On 2023/06/18 at 12h UTC, a warm and unstable southwesterly flow favored the development of strong thunderstorms over parts of France on June 18. The north of the country was swept by wind gusts between 90 and 110 km/h. Some supercells formed over the center and then the southwest of the country, sometimes generating heavy hail.
-
-**INSERT GIFS**
-
-**Tableau : temps training, commentaires (config + lien vers fichier), prévisions lisses, loss finale sur jeu de test, RAM utilisée, batch size**
-
-**Ajouter citation dans readme principal**
 
 | Model  | Configuration | Training Time | Batch Size  | Used RAM | Final loss on test set | Comments |
 | :---:   | :---: | :---: | :---: | :---: | :---: | :---: |
@@ -75,6 +66,20 @@ On 2023/06/18 at 12h UTC, a warm and unstable southwesterly flow favored the dev
 | UNetR++ | ARPEGE | EURAT01 (0.1°) | 24 Isobaric levels |  Z, T, U, V, HU |
 | UNetR++ | ARPEGE | EURAT01 (0.1°) | Sea |  P |
 | UNetR++ | AROME | EURW1S100 (1.3 km) | 10m |  U, V |
+
+
+### Scores
+
+TODO : add graph with RMSE per time step for a few surface and atmo parameters
+
+
+### Animations
+
+Here we present some forecast animations of these two models, compared to AROME and AROME analyses (our "ground truth" here) on a case study for 5 surface parameters.
+
+On 2023/06/18 at 12h UTC, a warm and unstable southwesterly flow favored the development of strong thunderstorms over parts of France on June 18. The north of the country was swept by wind gusts between 90 and 110 km/h. Some supercells formed over the center and then the southwest of the country, sometimes generating heavy hail.
+
+**INSERT GIFS**
 
 
 ## Analysis & Perspectives
