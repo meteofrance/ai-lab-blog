@@ -1,0 +1,31 @@
+# Site settings
+title: Meteo-France
+description: Blogposts from Meteo-France
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "https://meteofrance.github.io"
+
+# Build settings
+markdown: kramdown
+theme: minima
+
+# Plugins
+plugins:
+  - jekyll-feed
+
+# Navigation
+nav:
+  - title: Home
+    url: /
+  - title: About
+    url: /about
+
+# Exclude files from the build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - _site
+
+# GitHub Pages settings
+remote_theme: "mmistakes/minimal-mistakes"
