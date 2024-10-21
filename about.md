@@ -3,8 +3,6 @@ layout: page
 title: About Us
 ---
 
-# About Meteo-France AI Lab
-
 ## Meteo-France's AI Lab
 
 Meteo-France AI Lab is a small team of 6 people, created in 2019.
