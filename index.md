@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: home
 title: Home
 ---
 
@@ -8,3 +8,4 @@ title: Home
 [Home](index.md) | [About](about.md)
 
 This is the home page of my GitHub Pages website.
+
